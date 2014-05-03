@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Jars/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/bsh-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-exec-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-io-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/cssparser-0.9.11.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/htmlunit-2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/htmlunit-core-js-2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/httpmime-4.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/ini4j-0.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/jcommander-1.29.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/jetty-websocket-8.1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/jna-3.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/jna-platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/json-20080701.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/nekohtml-1.9.19.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/operadriver-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/phantomjsdriver-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/protobuf-java-2.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/selenium-java-2.41.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/selenium-java-2.41.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/xercesImpl-2.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jars/Excel Read/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
