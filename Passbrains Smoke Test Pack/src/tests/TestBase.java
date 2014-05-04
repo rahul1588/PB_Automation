@@ -25,7 +25,6 @@ public class TestBase {
 	public static Properties OR=null;
 	public static WebDriver dr=null;
 	public static EventFiringWebDriver driver=null;
-	public static boolean isLoggedIn=false;
 	public static Xls_Reader datatable=null;
 	
 	public void initialize() throws IOException{
