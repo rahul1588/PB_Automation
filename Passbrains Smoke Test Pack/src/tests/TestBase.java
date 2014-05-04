@@ -10,12 +10,12 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import util.TestUtil;
-
 import datatable.Xls_Reader;
 
 public class TestBase {
@@ -42,7 +42,12 @@ public class TestBase {
 		if(CONFIG.getProperty("browser").equals("Firefox")){
 			 dr = new FirefoxDriver();
 		}else if(CONFIG.getProperty("browser").equals("IE")){
+			 System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"//src/executables/IEDriverServer.exe");
 			 dr = new InternetExplorerDriver();
+		}
+		else if(CONFIG.getProperty("browser").equals("Chrome")){
+			 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//src/executables/chromedriver.exe");
+			 dr = new ChromeDriver();
 		}
 		
 		 driver = new EventFiringWebDriver(dr);
