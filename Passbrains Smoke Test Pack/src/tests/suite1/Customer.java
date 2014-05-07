@@ -25,7 +25,7 @@ public class Customer extends TestBase {
 	public String f_name;
 	public String l_name;
 	public String email;
-	public String Phone;
+	public String Phone_C;
 	public String Country;
 	public String City;
 	public String ZipCode;
@@ -34,12 +34,11 @@ public class Customer extends TestBase {
 	public String Dept;
 	public String Company;
 	public String Industry;
-	//public String DOB;
-	//public String hours;
+	
 	
 	public Customer(String f_name,String l_name,String email,
 			String Country,String City,String ZipCode,String Street,String Job_Title,String Dept,
-			String Company,String Industry,String Phone ){
+			String Company,String Industry,String Phone_C ){
 		
 		this.f_name=f_name;
 		this.l_name=l_name;
@@ -52,9 +51,8 @@ public class Customer extends TestBase {
 		this.Dept=Dept;
 		this.Company=Company;
 		this.Industry=Industry;
-		this.Phone=Phone;
-		//this.DOB=DOB;
-		//this.hours=hours;
+		this.Phone_C=Phone_C;
+		
 	}
 	@Before
 	public void beforeTest() throws IOException{
@@ -92,18 +90,15 @@ public class Customer extends TestBase {
 	    getObject("Job_Title").sendKeys(Job_Title);
 	    getObject("Dept").sendKeys(Dept);
 	    getObject("Company").sendKeys(Company);
-	    getObject("Industry").sendKeys(Industry);
-	    getObject("Phone").sendKeys(Phone);
-	    /*getObject("Gender_Male").click();
-	    getObject("DOB").sendKeys(DOB);
-        getObject("num_hours").sendKeys(hours);
-	    getObject("Terms").click();
-	    getObject("Register_Now").click();*/
+	    Select Y= new Select(getObject("Industry"));
+	    Y.selectByVisibleText(Industry);
+	    getObject("Phone_C").sendKeys(Phone_C);
+	    getObject("Register_Now").click();
         
 	    
 	    try{
 	    	assertEquals("Thank you",driver.findElement(By.xpath("Thank_msg")).getText());
-			assertEquals("for registering as a passbrains Customer!",driver.findElement(By.xpath("confirmation_novice")).getText());
+			assertEquals("for registering as a passbrains Customer!",driver.findElement(By.xpath("confirmation_Customer")).getText());
 			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("email_notification")).getText()); 
 	    	
 			}catch(Throwable t){
