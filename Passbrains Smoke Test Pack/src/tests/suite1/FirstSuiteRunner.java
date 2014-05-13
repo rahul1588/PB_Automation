@@ -9,6 +9,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
 NoviceTester.class,
 NoviceTester2Steps.class,
+Customer.class,
+Customer_Tester.class,
 ProfessionalTester.class,
 ProfTester3Steps.class
 

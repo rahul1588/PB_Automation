@@ -97,9 +97,9 @@ public class Customer extends TestBase {
         
 	    
 	    try{
-	    	assertEquals("Thank you",driver.findElement(By.xpath("Thank_msg")).getText());
-			assertEquals("for registering as a passbrains Customer!",driver.findElement(By.xpath("confirmation_Customer")).getText());
-			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("email_notification")).getText()); 
+	    	assertEquals("Thank you",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h3")).getText());
+			assertEquals("for registering as a passbrains Customer!",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h4")).getText());
+			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/p")).getText()); 
 	    	
 			}catch(Throwable t){
 				TestUtil.takeScreenShot("regerror_Customer");
