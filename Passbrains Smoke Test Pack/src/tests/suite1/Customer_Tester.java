@@ -8,6 +8,8 @@ import java.util.Collection;
 
 
 
+
+import org.junit.After;
 //import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.junit.Assume;
 import org.junit.Before;
@@ -17,6 +19,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+
 import tests.*;
 import util.TestUtil;
 
@@ -61,7 +64,7 @@ public class Customer_Tester extends TestBase {
 	}
 	@Before
 	public void beforeTest() throws IOException{
-		System.out.println("Initializing the system");
+		System.out.println("Opening the Browser");
 		initialize();
 
 		// xlsx file
@@ -116,6 +119,12 @@ public class Customer_Tester extends TestBase {
 			
 	    
 	    
+	}
+	
+	@After
+	public void teardown() throws IOException{
+		System.out.println("Closing the Browser");
+		closebrowser();
 	}
 	
 	@Parameters

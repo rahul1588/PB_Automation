@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.Collection;
 
 
+
+import org.junit.After;
 //import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.junit.Assume;
 import org.junit.Before;
@@ -56,7 +58,7 @@ public class Customer extends TestBase {
 	}
 	@Before
 	public void beforeTest() throws IOException{
-		System.out.println("Initializing the system");
+		System.out.println("Opening the Browser");
 		initialize();
 
 		// xlsx file
@@ -108,6 +110,12 @@ public class Customer extends TestBase {
 			
 	    
 	    
+	}
+	
+	@After
+	public void teardown() throws IOException{
+		System.out.println("Closing the Browser");
+		closebrowser();
 	}
 	
 	@Parameters

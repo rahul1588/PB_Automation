@@ -28,7 +28,7 @@ public class TestBase {
 	public static Xls_Reader datatable=null;
 	
 	public void initialize() throws IOException{
-	if(driver == null){
+	//if(driver == null){
 		// config property file
 		CONFIG= new Properties();
 		FileInputStream fn =new FileInputStream(System.getProperty("user.dir")+"//src//grid/config.properties");
@@ -53,9 +53,12 @@ public class TestBase {
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 
-	}
+	
 	}
 
+	public void closebrowser() throws IOException{
+		driver.close();
+	}
   
 	public static WebElement getObject(String xpathKey) {
 		try{

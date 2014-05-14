@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
@@ -69,7 +72,7 @@ public class NoviceTester2Steps extends TestBase {
 	}
 	@Before
 	public void beforeTest() throws IOException{
-		System.out.println("Initializing the system");
+		System.out.println("Opening the Browser");
 		initialize();
 
 		// xlsx file
@@ -126,23 +129,20 @@ public class NoviceTester2Steps extends TestBase {
 	    getObject("IE_10").click();
 	    getObject("Add_DesktopPC").click();
 	    
-	    getObject("Manufacturer").sendKeys(manufacturer);
-	    getObject("Manufacturer").sendKeys(Keys.ENTER);
-	    getObject("Model").click();
-	    try {
-			Thread.sleep(5000L);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    getObject("Model").sendKeys(model);
-	    getObject("Model").sendKeys(Keys.ENTER);
+	    
 	    try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	    getObject("Manufacturer").sendKeys(manufacturer);
+	    getObject("Manufacturer").sendKeys(Keys.ENTER);
+	    getObject("Model").click();
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    getObject("Model").sendKeys(model);
+	    getObject("Model").sendKeys(Keys.ENTER);
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	    getObject("Mobile_OS").click();
 	    getObject("Mobile_OS").sendKeys(model_OS);
 	    getObject("Carrier").sendKeys(carrier);
@@ -168,6 +168,11 @@ public class NoviceTester2Steps extends TestBase {
 	    
 	    }
 	    
+	@After
+	public void teardown() throws IOException{
+		System.out.println("Closing the Browser");
+		closebrowser();
+	}
 	    
 	    @Parameters
 		public static Collection<Object[]> dataSupplier(){

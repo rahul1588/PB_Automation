@@ -1,8 +1,11 @@
 package tests.suite1;
 import static org.junit.Assert.*;
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
+
+import org.junit.After;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +55,7 @@ public class NoviceTester extends TestBase {
 	}
 	@Before
 	public void beforeTest() throws IOException{
-		System.out.println("Initializing the system");
+		System.out.println("Opening the Browser");
 		initialize();
 
 		// xlsx file
@@ -108,6 +111,12 @@ public class NoviceTester extends TestBase {
 	    
 	    
 	}
+	@After
+	public void teardown() throws IOException{
+		System.out.println("Closing the Browser");
+		closebrowser();
+	}
+	
 	
 	@Parameters
 	public static Collection<Object[]> dataSupplier(){
