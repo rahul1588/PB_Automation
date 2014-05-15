@@ -2,12 +2,9 @@ package tests.suite1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Assume;
 import org.junit.Before;
@@ -113,23 +110,25 @@ public class NoviceTester2Steps extends TestBase {
 	    getObject("Next").click();
 	    
 	    //Adding Configuration details in the Next Page
+	    
+	    
 	    getObject("OS").sendKeys(OS);
-	    getObject("OS").sendKeys(Keys.ENTER);
+	    getObject("OS").sendKeys(Keys.TAB);
 	    try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		getObject("OS_Version").click();
 	    getObject("OS_Version").sendKeys(version);
+	    getObject("OS_Version").sendKeys(Keys.TAB);
 	    getObject("OS_Language").sendKeys(language);
 	    getObject("Chrome").click();
 	    getObject("FF").click();
 	    getObject("IE_10").click();
 	    getObject("Add_DesktopPC").click();
 	    
-	    
+	    getObject("Manufacturer").click();
 	    try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
@@ -137,18 +136,27 @@ public class NoviceTester2Steps extends TestBase {
 			e.printStackTrace();
 		}
 	    getObject("Manufacturer").sendKeys(manufacturer);
-	    getObject("Manufacturer").sendKeys(Keys.ENTER);
+	    getObject("Manufacturer").sendKeys(Keys.TAB);
+	    try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    getObject("Model").click();
-	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	    getObject("Model").sendKeys(model);
-	    getObject("Model").sendKeys(Keys.ENTER);
-	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    getObject("Model").sendKeys(Keys.TAB);
 	    getObject("Mobile_OS").click();
+	    try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    getObject("Mobile_OS").sendKeys(model_OS);
+	    getObject("Mobile_OS").sendKeys(Keys.TAB);
 	    getObject("Carrier").sendKeys(carrier);
 
-	    
-	    
 	    getObject("Add_Mobile_Device").click();
 	    getObject("Register_Now_2Page").click();
 	    
