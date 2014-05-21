@@ -106,7 +106,7 @@ public class ProfTester3Steps extends TestBase {
 	    getObject("Street").sendKeys(Street);
 	    getObject("Gender_Male").click();
         getObject("DOB").sendKeys(DOB);
-        getObject("experience").sendKeys(Experience);
+        getObject("experience").sendKeys("4");
         getObject("num_hours").sendKeys(hours);
 	    getObject("Terms").click();
 	    getObject("Next").click();
@@ -158,7 +158,7 @@ public class ProfTester3Steps extends TestBase {
 			e.printStackTrace();
 		}
 	    getObject("OS").click();
-	    getObject("OS").sendKeys(OS);
+	    getObject("OS").sendKeys("Windows");
 	    getObject("OS").sendKeys(Keys.TAB);
 	    try {
 			Thread.sleep(3000L);
