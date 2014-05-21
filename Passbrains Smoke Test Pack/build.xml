@@ -126,6 +126,7 @@
 			        <report todir="${test.reportsDir}" />  
 			    </junitreport>  
 			</target>
-
-	
+    <target name="email">
+	<java classname ="util.SendMail" classpath="${test.dest}" classpathhref="testcase.path"/>
+    </target>	
 </project>
