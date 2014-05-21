@@ -168,6 +168,12 @@ public class ProfTester3Steps extends TestBase {
 		}
 	    getObject("OS_Version").sendKeys(version);
 	    getObject("OS_Version").sendKeys(Keys.TAB);
+	    try {
+			Thread.sleep(3000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    getObject("OS_Language").sendKeys(language);
 	    getObject("Chrome").click();
 	    getObject("FF").click();

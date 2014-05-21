@@ -108,7 +108,6 @@ public class Customer_Tester2steps extends TestBase {
         getObject("num_hours").sendKeys(hours);
         getObject("Terms").click();
 	    getObject("Next").click();
-	   //driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 	    getObject("Project_Start").click();
 	    getObject("Calender1").click();
 	    getObject("Project_Deadline").click();
@@ -119,9 +118,9 @@ public class Customer_Tester2steps extends TestBase {
         
 	    
 	    try{
-	    	assertEquals("Thank you",driver.findElement(By.xpath("Thank_msg")).getText());
-			assertEquals("for registering as a passbrains Customer!",driver.findElement(By.xpath("confirmation_Customer_Tester")).getText());
-			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("email_notification")).getText()); 
+	    	assertEquals("Thank you",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h3")).getText());
+			assertEquals("for registering as a passbrains Customer / Novice Tester!",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h4")).getText());
+			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/p")).getText()); 
 	    	
 			}catch(Throwable t){
 				TestUtil.takeScreenShot("regerror_Customer_Tester2steps");
