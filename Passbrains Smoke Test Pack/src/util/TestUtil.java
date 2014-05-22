@@ -88,7 +88,7 @@ public class TestUtil extends TestBase{
 	 	try
 	 	{
 	 		File inFolder=new File(filepath);
-	 		File outFolder=new File("Reports.zip");
+	 		File outFolder=new File("Report.zip");
 	 		ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(outFolder)));
 	 		BufferedInputStream in = null;
 	 		byte[] data  = new byte[1000];

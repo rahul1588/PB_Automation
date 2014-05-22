@@ -8,7 +8,6 @@ import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.mail.*;
-
 import javax.mail.internet.*;
 
 import java.util.*;
@@ -22,32 +21,37 @@ public class SendMail
 
     {
     	//TestUtil.zip("C:\\rep");
-		TestUtil.zip("M:\\Report");
-
+		//TestUtil.zip("C:\\Report");
+    	try {
+			Zip.zipDir("C:\\Report",System.getProperty("user.dir")+"\\Report.zip" );
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	
-                String[] to={"rahul7751@gmail.com"};
+                String[] to={"abhinav.sejpal@pass.ch"};
 
                 String[] cc={};
                 String[] bcc={};
 
                 //This is for google
 
-                SendMail.sendMail("messages.cerner@gmail.com",
-                		            "preview4me",
+                SendMail.sendMail("rahul7751@gmail.com",
+                		            "heera123",
                 		            "smtp.gmail.com",
                 		            "465",
                 		            "true",
                 		            "true",
                 		            true,
-                		            "javax.net.ssl.SSLSocketFactory",
+                		           "javax.net.ssl.SSLSocketFactory",
                 		            "false",
                 		            to,
                 		            cc,
                 		            bcc,
-                		            "Automation test Reports",
+                		            "Automation Test Report",
                 		            "Please find the reports attached.\n\n Cheers\nAutoMAN",
-                		        	System.getProperty("user.dir")+"\\Reports.zip",
-                		        	"Reports.zip");
+                		        	System.getProperty("user.dir")+"\\Report.zip",
+                		        	"Report.zip");
            
 
     }
@@ -106,7 +110,7 @@ public class SendMail
 
         props.put("mail.smtp.socketFactory.port", port);
 
-                if(!"".equals(socketFactoryClass))
+               if(!"".equals(socketFactoryClass))
 
         props.put("mail.smtp.socketFactory.class",socketFactoryClass);
 

@@ -12,7 +12,7 @@
     <property name="test.dest" value="${ws.home}/build"/>
     <property name="test.src" value="${ws.home}/src"/>
     <property name="ws.suite" value="${ws.home}/src/Test"/> 
-	<property name="test.reportsDir" value="M:/reports"/>
+	<property name="test.reportsDir" value="C:/Report"/>
 
 	
 
@@ -117,16 +117,17 @@
 	    		<classpath refid="testcase.path" />  
 			</junit>  
 		
-		
-		
-			    <junitreport todir="${test.reportsDir}">    
+		         <junitreport todir="${test.reportsDir}">    
 			        <fileset dir="${test.reportsDir}">  
 			            <include name="TEST-*.xml" />  
 			        </fileset>  
 			        <report todir="${test.reportsDir}" />  
 			    </junitreport>  
 			</target>
+	
+	
     <target name="email">
-	<java classname ="util.SendMail" classpath="${test.dest}" classpathhref="testcase.path"/>
+	<java classpath="${test.dest}" classpathref="testcase.path" classname="util.SendMail"/>
     </target>	
+	
 </project>

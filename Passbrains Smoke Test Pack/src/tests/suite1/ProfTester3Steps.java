@@ -45,9 +45,9 @@ public class ProfTester3Steps extends TestBase {
 	
 	
 	public ProfTester3Steps(String f_name,String l_name,String email,String Phone,String SkypeID,
-			String PayPal,String Country,String City,String ZipCode,String Street,String DOB,
-			String hours,String OS,String version,String language,String manufacturer, String model,
-			String model_OS,String carrier,String Experience){
+			String PayPal,String Country,String City,String ZipCode,String Street,String DOB,String Experience
+			,String hours,String OS,String version,String language,String manufacturer, String model,
+			String model_OS,String carrier){
 		
 		this.f_name=f_name;
 		this.l_name=l_name;
@@ -106,7 +106,7 @@ public class ProfTester3Steps extends TestBase {
 	    getObject("Street").sendKeys(Street);
 	    getObject("Gender_Male").click();
         getObject("DOB").sendKeys(DOB);
-        getObject("experience").sendKeys("4");
+        getObject("experience").sendKeys(Experience);
         getObject("num_hours").sendKeys(hours);
 	    getObject("Terms").click();
 	    getObject("Next").click();
@@ -151,14 +151,9 @@ public class ProfTester3Steps extends TestBase {
 	    
 	    
 	    //Adding Configuration details in the 3rd Page
-	    try {
-			Thread.sleep(5000L);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    
 	    getObject("OS").click();
-	    getObject("OS").sendKeys("Windows");
+	    getObject("OS").sendKeys(OS);
 	    getObject("OS").sendKeys(Keys.TAB);
 	    try {
 			Thread.sleep(3000L);
@@ -216,7 +211,7 @@ public class ProfTester3Steps extends TestBase {
    try{
 	    	
 	    	assertEquals("Thank you",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h3")).getText());
-			assertEquals("for registering as a passbrains Professional Tester!",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h4")).getText());
+			assertEquals("for registering as a passbrains Test Expert!",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/h4")).getText());
 			assertEquals("An email notification is sent to your inbox to activate your account.",driver.findElement(By.xpath("html/body/div[1]/div[3]/div/div/p")).getText()); 
 	    	
 			}catch(Throwable t){
